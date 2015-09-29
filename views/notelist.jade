@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1.
+        Note List
+    ul
+        each note, i in notelist
+            li
+                a(href="/note/#{note.notename}")= note.notetitle
+                a(href="/note/#{note.notename}/edit/") &nbsp;[Edit]
+    a(href="/newnote") Add/Modify Note

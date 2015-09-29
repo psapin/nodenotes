@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1= title
+    form#formAddnote(name="addnote",method="post",action="/addnote")
+        input#inputnoteName(type="text", placeholder="notename", name="notename")
+        input#inputnoteTitle(type="text", placeholder="notetitle", name="notetitle")
+        textarea#inputnoteText(placeholder="notetext", name="notetext", form="formAddnote")
+        button#btnSubmit(type="submit") submit
